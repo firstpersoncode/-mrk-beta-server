@@ -2,8 +2,7 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "es2015",
-    "lib": ["es2015", "dom", "dom.iterable"],
-    "outDir": "./transpiled",
+    "outDir": "./dist",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -13,7 +12,6 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "baseUrl": "./src",
     "strictNullChecks": true,
     "noUnusedLocals": true,

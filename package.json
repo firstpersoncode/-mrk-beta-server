@@ -2,9 +2,9 @@
   "name": "@mrk-beta/server",
   "version": "1.0.0-beta",
   "description": "",
-  "main": "dist/lib.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "NODE_ENV=production yarn run clean && tsc && yarn run test && webpack -p",
+    "build": "NODE_ENV=production yarn run clean && yarn run test && tsc",
     "clean": "rm -rf dist",
     "test": "jest --coverage --runInBand",
     "check": "npm-check"
@@ -41,17 +41,13 @@
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.4",
     "@types/supertest": "^2.0.8",
-    "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^24.9.0",
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
     "npm-check": "^5.9.0",
     "supertest": "^4.0.2",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.6.2",
-    "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.8",
-    "webpack-node-externals": "^1.7.2"
+    "typescript": "^3.6.2"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
