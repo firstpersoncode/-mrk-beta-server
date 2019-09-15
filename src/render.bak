@@ -1,0 +1,26 @@
+// import React from 'react'
+// import { renderToString } from 'react-dom/server'
+import supertest from 'supertest'
+import serveApp from '.'
+import { Server } from './types'
+
+describe('render app', () => {
+    it('should response the GET method', () => {
+        const server: Server = serveApp(
+            {
+                store: {
+                    getState: () => ({}),
+                },
+                render: () => '<div>test</div>',
+            },
+            7000
+        )
+        supertest(server.app)
+            .get('/')
+            .then((response: any) => {
+                console.log('TEST', response)
+                expect(response.statusCode).toBe(200)
+                server.listener.close()
+            })
+    })
+})
